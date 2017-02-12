@@ -1,0 +1,12 @@
+version: '2'
+services:
+  spring-app:
+    container_name: spring
+    image: tsergouniotis/spring-webapp
+    ports:
+    - 8080:8080
+    networks:
+    - core_net
+networks:
+  core_net:
+    driver: bridge
